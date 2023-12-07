@@ -20,7 +20,7 @@ class Singleton(object):
     def close_log(self):
         self.log_file.close()
     
-logger = Singleton.instance()
+logger = Singleton.instance() # This is not nice as we create an object in a strange way
 logger.open_log('my.log')
 logger.write_log('Logging with classic Singleton patter.')
 logger.close_log()
